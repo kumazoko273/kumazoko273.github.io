@@ -50,9 +50,31 @@
       };
   </script>
 
-  
+  <style>
+    #panel2-btn {
+      background: #ccc;
+      color: #333;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s;
+    }
+    #panel2-btn:hover {
+      background: #4caf50;
+      color: #fff;
+    }
+
+    #panel2 {
+      display: none; 
+      border: 1px solid #ccc; 
+      padding: 16px;
+    }
+  </style>  
+
   <button id="panel2-btn">2のパネル</button>
-  <div id="panel2" style="display: none; border: 1px solid #ccc; padding: 16px;">
+  <div id="panel2" >
     <p>ここがパネル2です。</p>
     <button id="close-btn2">閉じる</button>
   </div>
