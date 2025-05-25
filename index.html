@@ -39,52 +39,8 @@
     <h1>ようこそ！</h1>
     <p>これはくまぞこのページです</p>
     
-<!--パネル1のスタイルとスクリプト--> 
-    <style>
-      #panel1-btn {
-        background: #ccc;
-        color: #333;
-        padding: 12px 24px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 16px;
-        transition: background 0.3s;
-      }
-      #panel1-btn:hover {
-        background: #4caf50;
-        color: #fff;
-      }
-      #panel1 {
-        display: none;
-        padding: 20px;
-        background: #e0ffe0;
-        border: 1px solid #b2ffb2;
-        border-radius: 4px;
-      }
 
-    </style>
-
-    <div> 
-      <button id="panel1-btn">1のパネル</button>
-    </div>
-    <div id="panel1">
-      ここが「1のパネル」です。ボタンを押すと表示・非表示が切り替わります。
-    </div>
-    <script>
-        const btn = document.getElementById('panel1-btn');
-        const panel = document.getElementById('panel1');
-
-        btn.onclick = function() {
-            if (panel.style.display === 'block') {
-                panel.style.display = 'none';
-            } else {
-                panel.style.display = 'block';
-            }
-        };
-    </script>
-<!-- ここまでボタン1 -->
-<!--パネル1のスタイルとスクリプト-->
+<!--パネル2のスタイルとスクリプト-->
     <style>
       #panel2-btn {
         background: #ccc;
@@ -95,7 +51,6 @@
         cursor: pointer;
         font-size: 16px;
         transition: background 0.3s;
-        margin-top: 16px;
       }
       #panel2-btn:hover {
         background: #4caf50;
@@ -128,7 +83,7 @@
       }
     </style>  
 
-    <button id="panel2-btn">2のパネル</button>
+    <button id="panel2-btn">twitterでの投稿</button>
     <div id="panel2" >
       <p>ここがパネル2です。</p>
       <button id="close-btn2">閉じる</button>
@@ -150,6 +105,52 @@
       };
     </script>
 <!-- ここまでボタン2 -->
+<!--パネル1のスタイルとスクリプト--> 
+    <style>
+      #panel1-btn {
+        background: #ccc;
+        color: #333;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background 0.3s;
+        margin-top: 16px;
+      }
+      #panel1-btn:hover {
+        background: #4caf50;
+        color: #fff;
+      }
+      #panel1 {
+        display: none;
+        padding: 20px;
+        background: #e0ffe0;
+        border: 1px solid #b2ffb2;
+        border-radius: 4px;
+      }
+
+    </style>
+
+    <div> 
+      <button id="panel1-btn">youtubeでの投稿</button>
+    </div>
+    <div id="panel1">
+      <iframe width="560" height="315" src="https://youtube.com/embed/2zCAzRf34E4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <script>
+      const btn = document.getElementById('panel1-btn');
+      const panel = document.getElementById('panel1');
+
+      btn.onclick = function() {
+          if (panel.style.display === 'block') {
+              panel.style.display = 'none';
+          } else {
+              panel.style.display = 'block';
+          }
+      };
+    </script>
+<!-- ここまでボタン1 -->
   </div>
 </body> 
 
