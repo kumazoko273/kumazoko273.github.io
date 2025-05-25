@@ -4,9 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>kumazoko io</title>
-</head>
 
-<body>
   <style> /*これは背景*/
     html, body {
     height: 100%;
@@ -18,8 +16,14 @@
       background-size: cover;            /* ウィンドウに画像をフィット */
       background-position: center 20%;       /* 画像を中央に配置 */
       background-repeat: no-repeat;      /* 繰り返しなし */
+      background-attachment: fixed; /* スクロール時に背景を固定 */
     }
   </style>
+
+</head>
+
+<body>
+
 
   <style> /* これはバックパネル */
     #backpanel{
@@ -40,9 +44,9 @@
     <p>これはくまぞこのページです</p>
     
 
-<!--パネル2のスタイルとスクリプト-->
+<!--twitterのスタイルとスクリプト-->
     <style>
-      #panel2-btn {
+      #tw-panel-btn {
         background: #ccc;
         color: #333;
         padding: 12px 24px;
@@ -52,12 +56,12 @@
         font-size: 16px;
         transition: background 0.3s;
       }
-      #panel2-btn:hover {
+      #tw-panel-btn:hover {
         background: #4caf50;
         color: #fff;
       }
 
-      #panel2 {
+      #tw-panel {
         display: none; 
         border: 1px solid #ccc; 
         padding: 16px;
@@ -65,7 +69,7 @@
         border-radius: 4px;
       }
 
-      #close-btn2{
+      #tw-close-btn{
         background: #4caf50;
         color: #000;
         border: 1px solid #262;
@@ -77,37 +81,44 @@
         transition: background 0.3s;
       }
 
-      #close-btn2:hover {
+      #tw-close-btn:hover {
         background: #0b0;
         color: #fff;
       }
     </style>  
 
-    <button id="panel2-btn">twitterでの投稿</button>
-    <div id="panel2" >
-      <p>ここがパネル2です。</p>
-      <button id="close-btn2">閉じる</button>
+    <button id="tw-panel-btn">twitterでの投稿</button>
+    <div id="tw-panel" >
+      <blockquote class="twitter-tweet">
+  <a href="https://twitter.com/kumazoko273/status/1904875765390598452"></a>
+      </blockquote>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <button id="tw-close-btn">閉じる</button>
     </div>
 
     <script>
     // パネルとパネル内のボタンを取得
-      const panel2 = document.getElementById('panel2');
-      const closeBtn2 = document.getElementById('close-btn2');
-      const panel2btn = document.getElementById('panel2-btn');
+      const tw_panel = document.getElementById('tw-panel');
+      const tw_closeBtn = document.getElementById('tw-close-btn');
+      const tw_panelbtn = document.getElementById('tw-panel-btn');
 
-      panel2btn.onclick = function() {
-        panel2.style.display = 'block';
+      tw_panelbtn.onclick = function() {
+        if (tw_panel.style.display === 'block') {
+          tw_panel.style.display = 'none';
+        } else {
+          tw_panel.style.display = 'block';
+        }
       };
 
     // 「閉じる」ボタンがクリックされたら、パネル自体を非表示にする
-      closeBtn2.onclick = function() {
-        panel2.style.display = 'none';
+      tw_closeBtn.onclick = function() {
+        tw_panel.style.display = 'none';
       };
     </script>
-<!-- ここまでボタン2 -->
-<!--パネル1のスタイルとスクリプト--> 
+<!-- ここまでtwitter -->
+<!--youtubeのスタイルとスクリプト--> 
     <style>
-      #panel1-btn {
+      #yt-panel-btn {
         background: #ccc;
         color: #333;
         padding: 12px 24px;
@@ -118,11 +129,11 @@
         transition: background 0.3s;
         margin-top: 16px;
       }
-      #panel1-btn:hover {
+      #yt-panel-btn:hover {
         background: #4caf50;
         color: #fff;
       }
-      #panel1 {
+      #yt-panel {
         display: none;
         padding: 20px;
         background: #e0ffe0;
@@ -130,27 +141,50 @@
         border-radius: 4px;
       }
 
+      #yt-close-btn{
+        background: #4caf50;
+        color: #000;
+        border: 1px solid #262;
+        padding: 6px 10px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        font-size: 12px;
+        transition: background 0.3s;
+      }
+
+      #yt-close-btn:hover {
+        background: #0b0;
+        color: #fff;
+      }
+
     </style>
 
     <div> 
-      <button id="panel1-btn">youtubeでの投稿</button>
+      <button id="yt-panel-btn">youtubeでの投稿</button>
     </div>
-    <div id="panel1">
+    <div id="yt-panel">
       <iframe width="560" height="315" src="https://youtube.com/embed/2zCAzRf34E4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <button id="yt-close-btn">閉じる</button>
     </div>
     <script>
-      const btn = document.getElementById('panel1-btn');
-      const panel = document.getElementById('panel1');
+      const yt_btn = document.getElementById('yt-panel-btn');
+      const yt_panel = document.getElementById('yt-panel');
+      const yt_closebtn = document.getElementById('yt-close-btn');
 
-      btn.onclick = function() {
-          if (panel.style.display === 'block') {
-              panel.style.display = 'none';
+      yt_btn.onclick = function() {
+          if (yt_panel.style.display === 'block') {
+              yt_panel.style.display = 'none';
           } else {
-              panel.style.display = 'block';
+              yt_panel.style.display = 'block';
           }
       };
+      // 「閉じる」ボタンがクリックされたら、パネル自体を非表示にする
+      yt_closebtn.onclick = function() {
+        yt_panel.style.display = 'none';
+      };
     </script>
-<!-- ここまでボタン1 -->
+<!-- ここまでyoutube -->
   </div>
 </body> 
 
