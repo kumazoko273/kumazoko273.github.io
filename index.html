@@ -21,7 +21,6 @@
     }
     #panel1 {
       display: none;
-      margin-top: 16px;
       padding: 20px;
       background: #e0ffe0;
       border: 1px solid #b2ffb2;
@@ -29,28 +28,6 @@
     }
 
   </style>
-</head>
-<body>
-  <h1>ようこそ！</h1>
-  <p>これは GitHub Pages を使って公開されたくまぞこのページです</p>
-  <div>
-    <button id="panel1-btn">1のパネル</button>
-  </div>
-  <div id="panel1">
-    ここが「1のパネル」です。ボタンを押すと表示・非表示が切り替わります。
-  </div>
-  <script>
-      const btn = document.getElementById('panel1-btn');
-      const panel = document.getElementById('panel1');
-
-      btn.onclick = function() {
-          if (panel.style.display === 'block') {
-              panel.style.display = 'none';
-          } else {
-              panel.style.display = 'block';
-          }
-      };
-  </script>
 
   <style>
     #panel2-btn {
@@ -62,6 +39,7 @@
       cursor: pointer;
       font-size: 16px;
       transition: background 0.3s;
+      margin-top: 16px;
     }
     #panel2-btn:hover {
       background: #4caf50;
@@ -93,6 +71,34 @@
       color: #fff;
     }
   </style>  
+
+
+</head>
+<body>
+  <h1>ようこそ！</h1>
+  <p>これは GitHub Pages を使って公開されたくまぞこのページです</p>
+  <div>
+    <button id="panel1-btn">1のパネル</button>
+  </div>
+  <div id="panel1">
+    ここが「1のパネル」です。ボタンを押すと表示・非表示が切り替わります。
+  </div>
+  <script>
+      const btn = document.getElementById('panel1-btn');
+      const panel = document.getElementById('panel1');
+
+      btn.onclick = function() {
+          if (panel.style.display === 'block') {
+              panel.style.display = 'none';
+          } else {
+              panel.style.display = 'block';
+          }
+      };
+  </script>
+ 
+
+
+<body>
 
   <button id="panel2-btn">2のパネル</button>
   <div id="panel2" >
