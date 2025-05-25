@@ -50,7 +50,7 @@
       };
   </script>
 
-  
+  <button id="panel2-btn">2のパネル</button>
   <div id="panel2" style="display: block; border: 1px solid #ccc; padding: 16px;">
     <p>ここがパネル2です。</p>
     <button id="close-btn2">閉じる</button>
@@ -60,6 +60,11 @@
   // パネルとパネル内のボタンを取得
     const panel2 = document.getElementById('panel2');
     const closeBtn2 = document.getElementById('close-btn2');
+    const panel2btn = document.getElementById('panel2-btn');
+
+    panel2btn.onclock = function() {
+      panel2.style.display = 'block';
+    };
 
   // 「閉じる」ボタンがクリックされたら、パネル自体を非表示にする
     closeBtn2.onclick = function() {
