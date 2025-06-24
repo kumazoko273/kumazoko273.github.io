@@ -41,8 +41,19 @@
   <div id ="backpanel">
       
     <h1>ようこそ！</h1>
-    <p>これはくまぞこのページです</p>
+    <p>なんとなく決めた名前で投稿を初めて早数年、ろくな実績もないまま年だけは取ってしまいました...<br>
+    色んなジャンルを行ったり来たりするDTMerです!<br>
+    ↓活動場所
+    </p>
     
+    <div style="margin-bottom: 24px;">
+      <a href="https://twitter.com/kumazoko273" target="_blank" rel="noopener noreferrer">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" alt="X(Twitter)" style="width:32px;height:32px;vertical-align:middle;">
+      </a>
+      <a href="https://www.youtube.com/@kumazoko" target="_blank" rel="noopener noreferrer">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="YouTube" style="width:32px;height:32px;vertical-align:middle;">
+      </a>
+    </div>
 
 <!--twitterのスタイルとスクリプト-->
     <style>
@@ -90,7 +101,16 @@
     <button id="tw-panel-btn">twitterでの投稿</button>
     <div id="tw-panel" >
       <blockquote class="twitter-tweet">
-  <a href="https://twitter.com/kumazoko273/status/1904875765390598452"></a>
+        <a href="https://twitter.com/kumazoko273/status/1904875765390598452"></a>
+      </blockquote>
+      <blockquote class="twitter-tweet">
+        <a href="https://twitter.com/kumazoko273/status/1779102778906071280"></a>
+      </blockquote>
+      <blockquote class="twitter-tweet">
+        <a href="https://x.com/kumazoko273/status/1915061784349725124"></a>
+      </blockquote>
+      <blockquote class="twitter-tweet">
+        <a href="https://x.com/kumazoko273/status/1667531693790736384"></a>
       </blockquote>
       <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
       <button id="tw-close-btn">閉じる</button>
@@ -102,6 +122,7 @@
       const tw_closeBtn = document.getElementById('tw-close-btn');
       const tw_panelbtn = document.getElementById('tw-panel-btn');
 
+    // 「twitterでの投稿」ボタンがクリックされたら、パネルを表示/非表示にする
       tw_panelbtn.onclick = function() {
         if (tw_panel.style.display === 'block') {
           tw_panel.style.display = 'none';
@@ -182,8 +203,18 @@
       <div class = "video"> 
         <iframe width="516" max-height= "315" src="https://youtube.com/embed/2zCAzRf34E4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
+      <div class = "video"> 
+        <iframe width="516" max-height= "315" src="https://youtube.com/embed/WtO_MP9s0xI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <div class = "video"> 
+        <iframe width="516" max-height= "315" src="https://youtube.com/embed/4zWXrZ7o_Hw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <div class = "video"> 
+        <iframe width="516" max-height= "315" src="https://youtube.com/embed/SFYXF5pmzDg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
       <button id="yt-close-btn">閉じる</button>
     </div>
+
     <script>
       const yt_btn = document.getElementById('yt-panel-btn');
       const yt_panel = document.getElementById('yt-panel');
